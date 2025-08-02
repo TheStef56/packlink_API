@@ -52,8 +52,8 @@ Shipment:
 s = PacklinkShipment("user", "password")
 s.login()
 s.set_shipping_details(city,
-                      country,
-                      state,
+                      country,   # "IT"
+                      state,     # "Italy"
                       zip_cod,
                       email,
                       name,
@@ -63,8 +63,8 @@ s.set_shipping_details(city,
                       "from")
 
 s.set_shipping_details(city,
-                      country,
-                      state,
+                      country,   # "IT"
+                      state,     # "Italy"
                       zip_cod,
                       email,
                       name,
@@ -76,7 +76,7 @@ s.carrier_details(carrier,         # Poste Italiane
                   service,         # Crono Standard
                   service_id,
                   collection_date, # 2025/08/04
-                  collection_time, # 09: 00-18: 30
+                  collection_time, # 09:00-18:30
                   content_value,
                   content,         # "Abbigliamento"
                   currency)
