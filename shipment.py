@@ -79,7 +79,7 @@ class PacklinkShipment(PacklinkBase):
                         collection_date: str, # 2025/08/04
                         collection_time: str, # 09:00-18:30
                         content_value  : int,
-                        content        : str = "Abbigliamento",
+                        content        : str, # "Abbigliamento"
                         currency       : str = "EUR",
                         ):
         self.payload.update({

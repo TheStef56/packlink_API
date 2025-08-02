@@ -98,13 +98,13 @@ class PacklinkProPreview(PacklinkFreePreview, PacklinkBase):
         print(req)
 
 # usage:
-p = PacklinkProPreview("dopeshirts.social@gmail.com", "WindowsForSh1pping5202!", "IT", "IT", 72026, 20019)
-p.login()
-p.add_package(10, 10, 2, 0.15)
-p.makereq()
-p.select_best()
-p.logout()
+# p = PacklinkProPreview("user", "password", "IT", "IT", 12345, 12345)
+# p.login()
+# p.add_package(10, 10, 2, 0.15)
+# p.makereq()
+# p.select_best()
+# p.logout()
 
-print(p.carrier)
-print(p.price)
-print(p.shipping_time)
+# print(p.carrier)
+# print(p.price)
+# print(p.shipping_time)
