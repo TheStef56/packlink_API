@@ -6,7 +6,7 @@ packlink_API is python implementation of the interactions with packlink APIs, to
 
 - Retrieve the available shipping options for one/multiple package(s) (given width, heigth, length and weigth) with the available carriers.
 
-- Create a shipment automatically ready to be paid.
+- Create a shipping automatically ready to be paid.
 
 ## Installation
 
@@ -46,10 +46,10 @@ print(p.price)
 print(p.shipping_time)
 # ...
 ```
-Shipment:
+Shipping:
 ```python
 # usage
-s = PacklinkShipment("user", "password")
+s = PacklinkShipping("user", "password")
 s.login()
 s.set_shipping_details(city,
                       country,   # "IT"
@@ -88,7 +88,7 @@ s.append_package(height,
                 name,
                 pid)
 
-s.commit_shipment()
+s.commit_shipping()
 s.logout()
 # ...
 ```

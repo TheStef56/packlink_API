@@ -1,7 +1,7 @@
 import requests
 from packlink_API.base import PacklinkBase
 
-class PacklinkShipment(PacklinkBase):
+class PacklinkShipping(PacklinkBase):
     def __init__(self, user: str, password: str):
         self.user     = user
         self.password = password
@@ -93,8 +93,8 @@ class PacklinkShipment(PacklinkBase):
             "currency"       : currency
         })
 
-    def commit_shipment(self):
-        url = "https://api.packlink.com/v1/shipments"
+    def commit_shipping(self):
+        url = "https://api.packlink.com/v1/shippings"
         headers = {
             "Authorization": self.token,
             "Content-Type": "application/json"
