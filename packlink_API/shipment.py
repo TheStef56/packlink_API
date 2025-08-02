@@ -104,13 +104,3 @@ class PacklinkShipment(PacklinkBase):
         if response.status_code == 201:
             return True
         return False
-    
-# usage
-# s = PacklinkShipment("user", "password")
-# s.login()
-# s.set_shipping_details(...)
-# s.set_shipping_details(...)
-# s.carrier_details(...)
-# s.append_package(...)
-# s.commit_shipment()
-# s.logout()

@@ -96,15 +96,3 @@ class PacklinkProPreview(PacklinkFreePreview, PacklinkBase):
                             json=self.payload)
         self.response = req.json()
         print(req)
-
-# usage:
-# p = PacklinkProPreview("user", "password", "IT", "IT", 12345, 12345)
-# p.login()
-# p.add_package(10, 10, 2, 0.15)
-# p.makereq()
-# p.select_best()
-# p.logout()
-
-# print(p.carrier)
-# print(p.price)
-# print(p.shipping_time)
