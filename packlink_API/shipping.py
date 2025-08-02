@@ -3,9 +3,10 @@ from packlink_API.base import PacklinkBase
 
 class PacklinkShipping(PacklinkBase):
     def __init__(self, user: str, password: str):
-        self.user     = user
-        self.password = password
-        self.token    = None
+        self.user      = user
+        self.password  = password
+        self.token     = None
+        self.reference = None
         self.payload  = {
             "carrier"                : "",
             "service"                : "",
@@ -79,7 +80,7 @@ class PacklinkShipping(PacklinkBase):
                         collection_date: str, # 2025/08/04
                         collection_time: str, # 09:00-18:30
                         content_value  : int,
-                        content        : str, # "Abbigliamento"
+                        content        : str = "Abbigliamento",
                         currency       : str = "EUR",
                         ):
         self.payload.update({
@@ -94,7 +95,7 @@ class PacklinkShipping(PacklinkBase):
         })
 
     def commit_shipping(self):
-        url = "https://api.packlink.com/v1/shippings"
+        url = "https://api.packlink.com/v1/shipments"
         headers = {
             "Authorization": self.token,
             "Content-Type": "application/json"
@@ -102,5 +103,6 @@ class PacklinkShipping(PacklinkBase):
 
         response = requests.post(url, headers=headers, json=self.payload)
         if response.status_code == 201:
+            self.reference = response.json()["reference"]
             return True
         return False
