@@ -95,4 +95,4 @@ class PacklinkProPreview(PacklinkFreePreview, PacklinkBase):
                             },
                             json=self.payload)
         self.response = req.json()
-        print(req)
+        return req

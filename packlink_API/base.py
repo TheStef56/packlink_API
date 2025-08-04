@@ -25,4 +25,4 @@ class PacklinkBase():
                                     "Cookie": f"token={self.token}"
                                 },
                             )
-        print(response.status_code)
+        return response
